@@ -1,0 +1,337 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 980px){
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
+
+
+body, html{
+    background: url(http://curelead.com/marketing/bg.jpg);
+    background-size: 130%;
+    background-position: center;
+    position: relative;
+
+}
+
+.btn-cl {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+
+color: #ffffff;
+background-color: #7DE1D7;
+border-color: #00B0A1;
+}
+
+.btn-cl:hover,
+.btn-cl:focus,
+.btn-cl:active,
+.btn-cl.active,
+.open .dropdown-toggle.btn-cl {
+  color: #ffffff;
+  background-color: #00B0A1;
+  border-color: #269abc;
+}
+
+.picture {
+    width: 8.333333333333332%;
+    padding: 0px;
+}
+.border{
+    border: 1px solid red;
+}
+.menubar{
+    margin-top: 20px;
+}
+.head-c{
+    height: 70px;
+    background: #7DE1D7;
+}
+.head-m{
+    height: 70px;
+    padding: 5px;
+    background: #ADEBE4;
+}
+.head-m h4{
+    padding-left: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #333;
+}
+.c-gr{
+    background :#F4F4F4;
+}
+.sidebar{
+    width: 18%;
+    margin-left: -10px;
+    padding-top: 30px;
+    padding-left: 20px;
+    font-size: 17px;
+    line-height: 2;
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar ul li{
+    padding-top: 10px;
+}
+.sidebar ul li a{
+    text-decoration: none;
+    color: #00B0A1;
+}
+.smallsidebar{
+    width: 100%;
+    font-size: 17px;
+}
+.smallsidebar ul{
+    list-style: none;
+}
+.smallsidebar ul li a{
+    text-decoration: none;
+    color: #00B0A1;
+}
+.content{
+    background: #F4F4F4;
+    box-shadow: 1px 2px 3px #CCC;
+    margin-left: -15px;
+    margin-right: 15px;
+}
+.box-div{
+    margin: 3px;
+    margin-left: -20px;
+    background: white;
+    height: 55px;
+    margin-bottom: 5px;
+}
+
+.lbl-head{
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+.ppimg{
+    width: 40px;
+    /*margin-top: -40px;
+    margin-left: -10px;
+    margin-right: 5px;*/
+}
+.sub-lbl-head{
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.sidebar ul li a:hover{
+
+}
+.likedi i{
+    padding: 3px;
+    width: 36px;
+    padding-left: 10px;
+    background: #7DE1D7;
+    color: #4C8882;
+    margin-left: 8px;
+    margin-top: 4px;
+    border: 1px solid #333;
+    box-shadow: 2px 2px 3px #CCC;
+    cursor: pointer;
+    border-radius: 4px;
+    border :none;
+}
+.like-n{
+    color: #00B0A1;
+    font-size: 35px;
+    padding-top: 15px;
+    font-weight: lighter;
+}
+/* form */
+.cstm-input{
+    border: 1px solid #CCC;
+}
+.btn-logout{
+    border: 2px solid #FFF;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    width: 140px;
+    margin-top: 8px;
+    border-radius: 6px;
+    text-shadow: 1px 1px 3px #333;
+    font-size: 20px;
+    font-weight: bolder;
+    box-shadow: 1px 1px 3px #999 inset;
+}
+.starclr{
+    color: #E2A22E;
+}
+.lastimgs{
+    height:40px;
+    width: 40px;
+}
+.lastimgs1{
+    height:50px;
+    width: 50px;
+}
+.starmargin{
+    margin-top:-5px;
+    font-size: 10px;
+}
+.imgmargin{
+    margin-top:5px;
+}
+.drclr{
+
+    color:#00B0A1;
+}
+.m5margin{
+    margin-top:-2px;
+    font-size: 10px;
+}
+.ftr{
+    color: #FFF;
+    width: 100%;
+    /*padding: 0% 15%;*/
+    height: 160px;
+    bottom: 0;
+    top: auto;
+    position: absolute;
+    clear:both;
+    background: #000;
+}
+.ftrlink{
+    text-decoration: none;
+    color: #FFF;
+    bottom: 0;
+}
+.smftr{
+    color: #FFF;
+    width: 100%;
+    /*padding: 0% 15%;*/
+    height: 160px;
+    bottom: -2;
+    top: auto;
+    position: absolute;
+    clear:both;
+    background: #000;
+}
+.smftrlink{
+    text-decoration: none;
+    color: #FFF;
+    bottom: 0;
+}
+.margin5{
+    margin-top: 5px;
+}
+.margin10{
+    margin-top: 10px;
+}
+.rawcenter{
+    width: 100%;
+    margin: auto;
+}
+.logoimg{
+    height: 75px;
+    width: 155px;
+    margin-top: -7px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.sscreen{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.smclr{
+    background: #FFF;
+}
+.sm-box-div{
+    margin:2px 0px;
+    background: white;
+    height: auto;
+}
+.w100{
+    width:
+}
+.smulli{
+    text-decoration: none;
+    width: 100%;
+    padding: 0% 7%;
+}
+.smulli li a{
+    color: #7DE1D7;
+}
+.xshead-m{
+    height: 70px;
+    background: #ADEBE4;
+    padding: 10px 0px;
+}
+.xshead-m h4{
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #333;
+    padding-left: 5px;
+}
+.xslogoimg{
+    height: 75px;
+    width: 200px;
+    margin-top: -7px;
+}
+.xsbtn{
+    font-size: 12px;
+    padding: 5px;
+    width: 100px;
+    margin-top: 20px;
+}
+.xsftrlink{
+    text-decoration: none;
+    color: #FFF;
+    font-size:10px;
+}
+.xsulli li a{
+    padding-left: 25px;
+}

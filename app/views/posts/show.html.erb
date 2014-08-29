@@ -1,0 +1,22 @@
+<% content_for :title, @post.title.to_s  %>
+<%= render partial: 'filepicker' %>
+<div class="row-fluid">
+  <div class="span12">
+    <h2><strong>Title: </strong><%= @post.title %></h2>
+    <p><strong>Score: </strong><%= @post.score %> | <strong>Views: </strong><%= @post.view_count %></p>
+    <div class="well">
+<!--  <p class="lead"><strong>Description:</strong></p> -->
+      <p class="lead"><strong>URL:</strong></p>
+      <p><%= @post.body %></p>
+    </div>
+  </div>
+</div>
+<ul class="thumbnails">
+  <%= render partial: 'image', collection: @post.images, locals: {p_id: @post.user_id} %>
+</ul>
+
+<!-- If you don't want comments, delete these 3 lines -->
+<div class="row-fluid">
+  <%= render partial: "shared/comments" %>
+</div>
+<!-- end comments -->

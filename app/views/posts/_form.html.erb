@@ -1,0 +1,27 @@
+<%= simple_form_for(@post) do |f| %>
+  <%= f.input :title, :input_html => {:style => 'background-color: transparent; width: 100%;
+        height: 48px;
+        border: 1px solid rgba(255,255,255,.4);
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        display: block;
+        font-family: sans-serif;
+        color: #FFFFFF;
+        font-size: 20px;
+        text-align: left;
+        letter-spacing: 1px;
+        background: rgba(0, 0, 0, 0);'}, :placeholder => 'Article Title*', label: false %><br/>
+  <%= f.input :body, :input_html => {:style => 'background-color: transparent; width: 100%;
+        height: 48px;
+        border: 1px solid rgba(255,255,255,.4);
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        display: block;
+        font-family: sans-serif;
+        color: #FFFFFF;
+        font-size: 20px;
+        text-align: left;
+        letter-spacing: 1px;
+        background: rgba(0, 0, 0, 0);'}, :placeholder => 'Article URL*', label: false %><br/>
+  <%= f.submit "Submit", class: "btn btn-info" %>
+<% end %>

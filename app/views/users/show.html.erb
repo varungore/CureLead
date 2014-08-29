@@ -1,0 +1,24 @@
+<div align="center">
+  <h1><%= "Dr. #{@user.first_name} #{@user.last_name}" %></h1>
+  <h4><%= @user.oneliner %></h4>
+  <h5>
+    <img height="32" width="32" src="http://cdn.flaticon.com/png/256/30915.png">&nbsp;<%= @user.education %>
+  </h5>
+  <p><%= @user.description %></p>
+</div>
+
+<% @user.posts.each do |post| %>
+  <div class="media">
+    <%= link_to post, class: "pull-left" do %>
+      <img class="media-object" src="http://placehold.it/64x64">
+    <% end %>
+    <div class="media-body">
+      
+      <%= link_to post do %>
+      <% end %>
+      
+      <%= link_to post.body, post %>
+    </div>
+  </div>
+<% end %>
+

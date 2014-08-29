@@ -1,0 +1,867 @@
+<html>
+    <head>
+      <title>CureLead</title>
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+      <link rel="stylesheet" type="text/css" href="http://curelead.com/pages/cureleadpostsview/dist/css/bootstrap.css">
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <script src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <script>
+          function showNav(){
+              var nav = document.getElementById("bs-example-navbar-collapse-2");
+
+              var xscontent = document.getElementById("xscontent");
+
+              if(xscontent.style.marginTop == '350px')
+              {
+                  xscontent.style.marginTop = '0px';
+                  xscontent.style.transition = '0.7s';
+                  nav.style.transition = '0.7s';
+              }
+              else
+              {
+                  xscontent.style.marginTop = '350px';
+                  xscontent.style.transition = '0.7s';
+              }
+          }
+
+      </script>
+    </head>
+
+    <body>
+    <div class="container hidden-xs hidden-sm hidden-md visible-lg">
+    <div class="menubar">
+      <div class="row rawcenter">
+        <div class="col-lg-3 head-c">
+          <img class='logoimg' src="http://curelead.com/pages/cureleadpostsview/assets/img/logofps.png">
+        </div>
+        <div class="col-lg-6 head-m">
+          <div class="col-lg-5 margin5">
+            <h4>Add Site</h4>
+          </div>
+          <div class="col-lg-7 margin5" onclick="document.getElementById('newpost').click()">
+            <input type="text" class="newpost cstm-input text-center" placeholder="Article Name" onclick="document.getElementById('newpost').click()">
+            <input type="text" class="newpost cstm-input text-center" placeholder="Article URL" onclick="document.getElementById('newpost').click()">
+          </div>
+        </div>
+        <div class="col-lg-3 head-c text-right">
+          <input type="button" class="btn-logout" value="Facebook" onclick="location.href='http://facebook.com/CureLead'">
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <br>
+
+    <div class="content">
+    <div class="row">
+    <div class="col-lg-2">
+      <div class="sidebar">
+        <ul>
+          <li><a href="">Diabetes</a></li>
+          <li><a href="">Nutrition</a></li>
+          <li><a href="">Carbohydrates</a></li>
+          <li><a href="">Sugar</a></li>
+          <li><a href="">Glucose&nbsp;Measurement</a></li>
+          <li><a href="">Diet&nbsp;Modification</a></li>
+          <li><a href="">Protein</a></li>
+          <li><a href="">Fat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-10" style='min-height:710px; padding-bottom:120px;'>
+
+
+    <%= render partial: 'entry', collection: @posts %>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class='ftr hidden-xs hidden-sm hidden-md'>
+      <div class='container'>
+        <div class="col-lg-3">
+          <h3>CureLead</h3>
+          <a href='#' class='ftrlink'>About Us</a><br>
+          <a href='#' class='ftrlink'>Contact Us</a><br>
+          <a href='#' class='ftrlink'>Partners</a><br>
+          <a href='#' class='ftrlink'>Employment</a>
+        </div>
+        <div class="col-lg-3">
+          <h3>FAQ</h3>
+          <a href='#' class='ftrlink'>How It Works</a><br>
+          <a href='#' class='ftrlink'>Privacy Policy</a><br>
+          <a href='#' class='ftrlink'>Terms & Conditions</a>
+        </div>
+        <div class="col-lg-3">
+          <h3>Account</h3>
+          <a href='#' class='ftrlink'>My Account</a><br>
+          <a href='#' class='ftrlink'>Funding History</a><br>
+          <a href='#' class='ftrlink'>Newsletter</a>
+        </div>
+        <div class="col-lg-3">
+          <h3>Media</h3>
+          <a href='#' class='ftrlink'>Feedback</a><br>
+          <a href='#' class='ftrlink'>Twitter</a><br>
+          <a href='#' class='ftrlink'>Welbo</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- For sm and md screen -->
+    <div class="sscreen hidden-xs visible-sm visible-md hidden-lg" style='overflow-x:hidden;'>
+    <div class="row head-c">
+      <div class="col-sm-8 pull-left">
+        <img class='logoimg' src="assets/logofps.png">
+      </div>
+      <div class="col-sm-4 text-right pull-right">
+        <input type="button" class="btn-logout" value="Log Out">
+      </div>
+    </div>
+    <div class="row head-m">
+      <div class="col-sm-10 pull-left"  style='padding-top: 7px;'>
+        <h4 class='pull-left mr10'>Add Site</h4>
+        <input type="text" class="cstm-input text-center" placeholder="Article Name"><br>
+        <input type="text" class="cstm-input text-center" placeholder="Article URL">
+      </div>
+
+      <div class="col-sm-2 pull-right">
+        <nav class="navbar" role="navigation">
+          <button type="button" class="navbar-toggle" style="border:#FFF 2px solid" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only smclr">Toggle navigation</span>
+            <span class="icon-bar smclr"></span>
+            <span class="icon-bar smclr"></span>
+            <span class="icon-bar smclr"></span>
+          </button>
+        </nav>
+      </div>
+      <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background:white;z-index:200;"> -->
+      <ul class="smulli nav navbar-nav cstm-ul">
+        <li><a href="">Diabetes</a></li>
+        <li><a href="">Nutritian</a></li>
+        <li><a href="">Endocrine</a></li>
+        <li><a href="">Medicine</a></li>
+        <li><a href="">Trending</a></li>
+        <li><a href="">Latest</a></li>
+        <li><a href="">All Time</a></li>
+        <li><a href="">Submit [+]</a></li>
+      </ul>
+      <!-- </div> --><!-- /.navbar-collapse -->
+    </div>
+    <div style='min-height:1100px;margin-left:0px;'>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="col-sm-6">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="like-n">94+</label>
+          </div>
+        </div>
+        <div class="col-sm-8 imgmargin">
+          <div class='col-sm-1'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+          <div class='col-sm-6 lbl-head'>
+            Checking your Blood Glucose
+            <h6 class='m5margin'>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+          </div>
+          <div class='col-sm-2 sub-lbl-head m5margin'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-sm-3 starmargin'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+        </div>
+        <div class="col-sm-2 imgmargin">
+          <!-- <div class='col-sm-6'> -->
+          <img src='assets/share.png' class='lastimgs'/>
+          <img src='assets/circle.png' class='lastimgs1'/>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="col-sm-6">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="like-n">94+</label>
+          </div>
+        </div>
+        <div class="col-sm-8 imgmargin">
+          <div class='col-sm-1'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+          <div class='col-sm-6 lbl-head'>
+            Checking your Blood Glucose
+            <h6 class='m5margin'>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+          </div>
+          <div class='col-sm-2 sub-lbl-head m5margin'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-sm-3 starmargin'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+        </div>
+        <div class="col-sm-2 imgmargin">
+          <!-- <div class='col-sm-6'> -->
+          <img src='assets/share.png' class='lastimgs'/>
+          <img src='assets/circle.png' class='lastimgs1'/>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="col-sm-6">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="like-n">94+</label>
+          </div>
+        </div>
+        <div class="col-sm-8 imgmargin">
+          <div class='col-sm-1'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+          <div class='col-sm-6 lbl-head'>
+            Checking your Blood Glucose
+            <h6 class='m5margin'>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+          </div>
+          <div class='col-sm-2 sub-lbl-head m5margin'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-sm-3 starmargin'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+        </div>
+        <div class="col-sm-2 imgmargin">
+          <!-- <div class='col-sm-6'> -->
+          <img src='assets/share.png' class='lastimgs'/>
+          <img src='assets/circle.png' class='lastimgs1'/>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="col-sm-6">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="like-n">94+</label>
+          </div>
+        </div>
+        <div class="col-sm-8 imgmargin">
+          <div class='col-sm-1'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+          <div class='col-sm-6 lbl-head'>
+            Checking your Blood Glucose
+            <h6 class='m5margin'>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+          </div>
+          <div class='col-sm-2 sub-lbl-head m5margin'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-sm-3 starmargin'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+        </div>
+        <div class="col-sm-2 imgmargin">
+          <!-- <div class='col-sm-6'> -->
+          <img src='assets/share.png' class='lastimgs'/>
+          <img src='assets/circle.png' class='lastimgs1'/>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="col-sm-6">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="like-n">94+</label>
+          </div>
+        </div>
+        <div class="col-sm-8 imgmargin">
+          <div class='col-sm-1'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+          <div class='col-sm-6 lbl-head'>
+            Checking your Blood Glucose
+            <h6 class='m5margin'>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+          </div>
+          <div class='col-sm-2 sub-lbl-head m5margin'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-sm-3 starmargin'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+        </div>
+        <div class="col-sm-2 imgmargin">
+          <!-- <div class='col-sm-6'> -->
+          <img src='assets/share.png' class='lastimgs'/>
+          <img src='assets/circle.png' class='lastimgs1'/>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="col-sm-6">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="like-n">94+</label>
+          </div>
+        </div>
+        <div class="col-sm-8 imgmargin">
+          <div class='col-sm-1'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+          <div class='col-sm-6 lbl-head'>
+            Checking your Blood Glucose
+            <h6 class='m5margin'>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+          </div>
+          <div class='col-sm-2 sub-lbl-head m5margin'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-sm-3 starmargin'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+        </div>
+        <div class="col-sm-2 imgmargin">
+          <!-- <div class='col-sm-6'> -->
+          <img src='assets/share.png' class='lastimgs'/>
+          <img src='assets/circle.png' class='lastimgs1'/>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="col-sm-6">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="like-n">94+</label>
+          </div>
+        </div>
+        <div class="col-sm-8 imgmargin">
+          <div class='col-sm-1'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+          <div class='col-sm-6 lbl-head'>
+            Checking your Blood Glucose
+            <h6 class='m5margin'>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+          </div>
+          <div class='col-sm-2 sub-lbl-head m5margin'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-sm-3 starmargin'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+        </div>
+        <div class="col-sm-2 imgmargin">
+          <!-- <div class='col-sm-6'> -->
+          <img src='assets/share.png' class='lastimgs'/>
+          <img src='assets/circle.png' class='lastimgs1'/>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="col-sm-6">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="like-n">94+</label>
+          </div>
+        </div>
+        <div class="col-sm-8 imgmargin">
+          <div class='col-sm-1'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+          <div class='col-sm-6 lbl-head'>
+            Checking your Blood Glucose
+            <h6 class='m5margin'>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+          </div>
+          <div class='col-sm-2 sub-lbl-head m5margin'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-sm-3 starmargin'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+        </div>
+        <div class="col-sm-2 imgmargin">
+          <!-- <div class='col-sm-6'> -->
+          <img src='assets/share.png' class='lastimgs'/>
+          <img src='assets/circle.png' class='lastimgs1'/>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="col-sm-6">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="like-n">94+</label>
+          </div>
+        </div>
+        <div class="col-sm-8 imgmargin">
+          <div class='col-sm-1'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+          <div class='col-sm-6 lbl-head'>
+            Checking your Blood Glucose
+            <h6 class='m5margin'>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+          </div>
+          <div class='col-sm-2 sub-lbl-head m5margin'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-sm-3 starmargin'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+        </div>
+        <div class="col-sm-2 imgmargin">
+          <!-- <div class='col-sm-6'> -->
+          <img src='assets/share.png' class='lastimgs'/>
+          <img src='assets/circle.png' class='lastimgs1'/>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+    </div>
+    <div class='smftr hidden-xs visible-sm vissile-md hidden-lg'>
+      <div class="col-sm-3">
+        <h3>CureLead</h3>
+        <a href='#' class='ftrlink'>About Us</a><br>
+        <a href='#' class='ftrlink'>Contact Us</a><br>
+        <a href='#' class='ftrlink'>Partners</a><br>
+        <a href='#' class='ftrlink'>Employment</a>
+      </div>
+      <div class="col-sm-3">
+        <h3>FAQ</h3>
+        <a href='#' class='ftrlink'>How It Works</a><br>
+        <a href='#' class='ftrlink'>Privacy Policy</a><br>
+        <a href='#' class='ftrlink'>Terms & Conditions</a>
+      </div>
+      <div class="col-sm-3">
+        <h3>Account</h3>
+        <a href='#' class='ftrlink'>My Account</a><br>
+        <a href='#' class='ftrlink'>Funding History</a><br>
+        <a href='#' class='ftrlink'>Newsletter</a>
+      </div>
+      <div class="col-sm-3">
+        <h3>Media</h3>
+        <a href='#' class='ftrlink'>Feedback</a><br>
+        <a href='#' class='ftrlink'>Twitter</a><br>
+        <a href='#' class='ftrlink'>Welbo</a>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- For xs screen -->
+    <div class="sscreen visible-xs hidden-sm hidden-md hidden-lg" style='overflow-x:hidden'>
+    <div class="row head-c">
+      <div class="col-xs-7 pull-left">
+        <img class='xslogoimg' src="assets/logofps.png">
+      </div>
+      <div class="col-xs-5 text-right">
+        <input type="button" class="xsbtn btn-logout" value="Log Out">
+      </div>
+    </div>
+    <div class="row xshead-m">
+      <div class="col-xs-8 pull-left">
+        <h4 class='mr10 pull-left'>Add Site</h4>
+        <input type="text" class="cstm-input text-center" placeholder="Article Name" style='width:86px;'><br>
+        <input type="text" class="cstm-input text-center" placeholder="Article URL" style='width:86px;'>
+      </div>
+
+      <div class="col-xs-4 pull-right">
+        <nav class="navbar" role="navigation" style="margin-top:-14px;">
+          <button type="button" class="navbar-toggle" onclick='showNav()' style="border:#FFF 2px solid;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <span class="sr-only smclr">Toggle navigation</span>
+            <span class="icon-bar smclr"></span>
+            <span class="icon-bar smclr"></span>
+            <span class="icon-bar smclr"></span>
+          </button>
+        </nav>
+      </div>
+      <div class="smallsidebar collapse navbar-collapse" id="bs-example-navbar-collapse-2" style="background:white;">
+        <ul class="xsulli nav navbar-nav cstm-ul">
+          <li><a href="">Diabetes</a></li>
+          <li><a href="">Nutritian</a></li>
+          <li><a href="">Endocrine</a></li>
+          <li><a href="">Medicine</a></li>
+          <li><a href="">Trending</a></li>
+          <li><a href="">Latest</a></li>
+          <li><a href="">All Time</a></li>
+          <li><a href="">Submit [+]</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+
+
+
+
+
+    <!--  Mobile.....  -->
+
+
+    <div  style='min-height:2000px;' id='xscontent'>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div>
+          <div class="col-xs-4">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <label class="like-n">94+</label>
+          </div>
+          <div class='col-xs-4'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+        </div>
+        <div style='clear:both'></div>
+        <div style='margin-left: 25;font-size: large;'>
+          Checking your Blood Glucose
+          <h6>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+        </div>
+        <div>
+          <div class='col-xs-4' style='padding-left: 25px;'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-xs-4'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+          <div class="col-xs-4">
+            <img src='assets/share.png' class='lastimgs'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src='assets/circle.png' class='lastimgs1'/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div>
+          <div class="col-xs-4">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <label class="like-n">94+</label>
+          </div>
+          <div class='col-xs-4'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+        </div>
+        <div style='clear:both'></div>
+        <div style='margin-left: 25;font-size: large;'>
+          Checking your Blood Glucose
+          <h6>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+        </div>
+        <div>
+          <div class='col-xs-4' style='padding-left: 25px;'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-xs-4'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+          <div class="col-xs-4">
+            <img src='assets/share.png' class='lastimgs'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src='assets/circle.png' class='lastimgs1'/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div>
+          <div class="col-xs-4">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <label class="like-n">94+</label>
+          </div>
+          <div class='col-xs-4'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+        </div>
+        <div style='clear:both'></div>
+        <div style='margin-left: 25;font-size: large;'>
+          Checking your Blood Glucose
+          <h6>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+        </div>
+        <div>
+          <div class='col-xs-4' style='padding-left: 25px;'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-xs-4'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+          <div class="col-xs-4">
+            <img src='assets/share.png' class='lastimgs'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src='assets/circle.png' class='lastimgs1'/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div>
+          <div class="col-xs-4">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <label class="like-n">94+</label>
+          </div>
+          <div class='col-xs-4'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+        </div>
+        <div style='clear:both'></div>
+        <div style='margin-left: 25;font-size: large;'>
+          Checking your Blood Glucose
+          <h6>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+        </div>
+        <div>
+          <div class='col-xs-4' style='padding-left: 25px;'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-xs-4'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+          <div class="col-xs-4">
+            <img src='assets/share.png' class='lastimgs'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src='assets/circle.png' class='lastimgs1'/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div>
+          <div class="col-xs-4">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <label class="like-n">94+</label>
+          </div>
+          <div class='col-xs-4'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+        </div>
+        <div style='clear:both'></div>
+        <div style='margin-left: 25;font-size: large;'>
+          Checking your Blood Glucose
+          <h6>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+        </div>
+        <div>
+          <div class='col-xs-4' style='padding-left: 25px;'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-xs-4'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+          <div class="col-xs-4">
+            <img src='assets/share.png' class='lastimgs'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src='assets/circle.png' class='lastimgs1'/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm-box-div">
+      <div class="row">
+        <div>
+          <div class="col-xs-4">
+            <div class="likedi">
+              <i class='fa fa-thumbs-up fa-lg'></i><br>
+              <i class='fa fa-thumbs-down fa-lg'></i>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <label class="like-n">94+</label>
+          </div>
+          <div class='col-xs-4'>
+            <img src='assets/pp.png' class="ppimg" />
+          </div>
+        </div>
+        <div style='clear:both'></div>
+        <div style='margin-left: 25;font-size: large;'>
+          Checking your Blood Glucose
+          <h6>Posted by <span class='drclr'>Dr. Stevenson</span> on 03/01/13</h6>
+        </div>
+        <div>
+          <div class='col-xs-4' style='padding-left: 25px;'>
+            Accurate <br/> Practical<br> Up to date Readable
+          </div>
+          <div class='col-xs-4'>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+            <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+          </div>
+          <div class="col-xs-4">
+            <img src='assets/share.png' class='lastimgs'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src='assets/circle.png' class='lastimgs1'/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+    </div>
+    <div class='smftr visible-xs hidden-sm hidden-md hidden-lg'>
+      <div class="col-xs-3">
+        <h5>CureLead</h5>
+        <a href='#' class='xsftrlink'>About Us</a><br>
+        <a href='#' class='xsftrlink'>Contact Us</a><br>
+        <a href='#' class='xsftrlink'>Partners</a><br>
+        <a href='#' class='xsftrlink'>Employment</a>
+      </div>
+      <div class="col-xs-3">
+        <h5>FAQ</h5>
+        <a href='#' class='xsftrlink'>How It Works</a><br>
+        <a href='#' class='xsftrlink'>Privacy Policy</a><br>
+        <a href='#' class='xsftrlink'>Terms & Conditions</a>
+      </div>
+      <div class="col-xs-3">
+        <h5>Account</h5>
+        <a href='#' class='xsftrlink'>My Account</a><br>
+        <a href='#' class='xsftrlink'>Funding History</a><br>
+        <a href='#' class='xsftrlink'>Newsletter</a>
+      </div>
+      <div class="col-xs-3">
+        <h5>Media</h5>
+        <a href='#' class='xsftrlink'>Feedback</a><br>
+        <a href='#' class='xsftrlink'>Twitter</a><br>
+        <a href='#' class='xsftrlink'>Welbo</a>
+      </div>
+    </div>
+    </body>
+</html>
+
+<script>          
+    $( ".newpost" ).focus(function() {
+        $( "#newpost" ).click();
+//        alert( "Handler for .focus() called." );
+    });
+          </script>

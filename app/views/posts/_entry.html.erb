@@ -1,0 +1,44 @@
+<div class="box-div">
+  <div class="row">
+    <div class="col-lg-2">
+      <div class="col-lg-6">
+        <div class="likedi">
+          <% if current_user %>
+            <%= link_to upvote_post_path(entry) do %> <i class='fa fa-thumbs-up fa-lg'></i><% end %>
+            <%= link_to downvote_post_path(entry) do %> <i class='fa fa-thumbs-down fa-lg'></i><% end %>
+          <% else %>
+            <i class='fa fa-thumbs-up fa-lg'></i><br>
+            <i class='fa fa-thumbs-down fa-lg'></i>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-lg-6" style="padding-left: 5px;">
+        <label class="like-n"><%= entry.score %>&#x25B4;</label>
+      </div>
+    </div>
+    <div class="col-lg-8 imgmargin" style="padding-left: 0px;">
+      <div class='col-lg-1' style="padding: 0px;">
+        <img src='http://curelead.com/pages/cureleadpostsview/assets/img/pp.png' class="ppimg" />
+      </div>
+      <div class='col-lg-8 lbl-head'>
+        <%= link_to entry.body, :target => "_blank" do %>
+          <%= entry.title %>
+        <% end %><%= link_to "[+]", entry %>
+        <h6 class='m5margin'>Posted by <span class='drclr'><%= entry.user.username %></span> on <%= entry.created_at.strftime("%b. %d %Y") %></h6>
+      </div>
+      <div class='col-lg-1 sub-lbl-head m5margin'>
+        Accurate <br/> Practical<br> Recent <br> Readable
+      </div>
+      <div class='col-lg-2 starmargin'>
+        <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+        <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+        <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><br>
+        <i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i><i class="fa fa-star starclr"></i>
+      </div>
+    </div>
+    <div class="col-lg-2 imgmargin">
+      <a href="https://youtube.com/CureLead" ><img src='http://curelead.com/pages/cureleadpostsview/assets/img/share.png' class='lastimgs'/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://twitter.com/CureLead" ><img src='http://curelead.com/pages/cureleadpostsview/assets/img/circle.png' class='lastimgs1'/></a>
+    </div>
+  </div>
+</div>
