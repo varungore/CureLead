@@ -13,4 +13,13 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email , :case_sensitive => false
 
   has_many :posts, dependent: :destroy
+
+  def self.get_usernames(user_ids)
+    usernames = {}
+    return {} if user_ids.blank?
+    User.select("id, username").where(id: user_ids).map{|user| usernames[user.id] = user.username}
+
+    usernames
+  end
+
 end

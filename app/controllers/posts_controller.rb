@@ -5,6 +5,8 @@ class PostsController < ApplicationController
 
   def show
     @images = @post.images
+    result = Comment.get_comment_data(@post.id)
+    @new_comment, @comments, @usernames = result[:new_comment], result[:comments], result[:usernames] 
   end
 
   def index

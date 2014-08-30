@@ -13,7 +13,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
+    
+    user_params[:email] = user_params["email"]
+    puts user_params
+    puts "*********"
+    puts user_params[:email]
     if @user.save
       auto_login(@user)
       redirect_to new_post_path, notice: "Account Created Successfully"

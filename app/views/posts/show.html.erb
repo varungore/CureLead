@@ -8,6 +8,40 @@
 <!--  <p class="lead"><strong>Description:</strong></p> -->
       <p class="lead"><strong>URL:</strong></p>
       <p><%= @post.body %></p>
+      <p><strong>Comments:</strong></p>
+      <table>
+        <tr>
+          <td colspan=3>
+          </td>
+          <%=puts "******\n\n\n"%>
+          <%=puts @usernames.inspect%>
+          <%=puts "******\n\n\n"%>
+          <td>
+            <% @comments.each do |comment|%>
+              <p><span style='font-size: 15px'><%= @usernames[comment.created_by].to_s.humanize %> </span>: <%= comment.comment.to_s %></p>
+            <%end%>
+          </td>
+        </tr>
+      </table>
+      <%= simple_form_for @new_comment do |f| %>
+      <div>
+      <%= f.input :comment,  :input_html => {:style => 'width: 100%;
+        height: 48px;
+        border: 1px solid rgba(255,255,255,.4);
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        display: block;
+        font-family: sans-serif;
+        color: #000000;
+        font-size: 20px;
+        text-align: left;
+        letter-spacing: 1px;
+        '}, :label_html => {:style => 'color: #00B0A1; font-weight: normal'} ,:placeholder => '' %>
+        </div>
+        <input name="user_id" type="hidden" value=<%=@post.user_id%> />
+        <input name="post_id" type="hidden" value=<%=@post.id%> />
+      <%= f.submit "Post", class: "btn btn-info" %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -20,3 +54,15 @@
   <%= render partial: "shared/comments" %>
 </div>
 <!-- end comments -->
+<script type="text/javascript">
+    function clickedComment(){
+      alert("clickFunc");
+      $.ajax({
+        type: "POST",
+        url: "",
+        data: {  },
+        dataType: "JSON"
+      }).success(function(json){
+      });
+    }
+  </script>

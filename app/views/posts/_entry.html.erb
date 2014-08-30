@@ -21,9 +21,10 @@
         <img src='http://curelead.com/pages/cureleadpostsview/assets/img/pp.png' class="ppimg" />
       </div>
       <div class='col-lg-8 lbl-head'>
-        <%= link_to entry.body, :target => "_blank" do %>
+        <%= link_to post_path(entry.id) , :target => "_blank" do %>
           <%= entry.title %>
-        <% end %><%= link_to "[+]", entry %>
+        <% end %>
+        <%= link_to "[+]", entry %>
         <h6 class='m5margin'>Posted by <span class='drclr'><%= entry.user.username %></span> on <%= entry.created_at.strftime("%b. %d %Y") %></h6>
       </div>
       <div class='col-lg-1 sub-lbl-head m5margin'>

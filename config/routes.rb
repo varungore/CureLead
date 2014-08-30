@@ -9,6 +9,7 @@ ShoeShop::Application.routes.draw do
     end
   end
   
+  resources :comments
   resources :users
   get 'profile' => 'users#profile'
     
