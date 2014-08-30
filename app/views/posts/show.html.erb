@@ -13,9 +13,6 @@
         <tr>
           <td colspan=3>
           </td>
-          <%=puts "******\n\n\n"%>
-          <%=puts @usernames.inspect%>
-          <%=puts "******\n\n\n"%>
           <td>
             <% @comments.each do |comment|%>
               <p><span style='font-size: 15px'><%= @usernames[comment.created_by].to_s.humanize %> </span>: <%= comment.comment.to_s %></p>

@@ -20,12 +20,12 @@ gem 'jquery-rails'
 gem 'unicorn'
 
 group :production do 
-  #gem 'pg'
+  gem 'pg'
   gem 'rails_12factor'
 end
 
 group :test, :development do 
-  #gem 'sqlite3'
+  gem 'sqlite3'
   gem 'mysql2'
   gem 'faker'
   gem 'minitest' # There is a bug on edge-rails that requires this

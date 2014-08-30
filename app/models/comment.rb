@@ -2,12 +2,10 @@ class Comment < ActiveRecord::Base
 
   validates :comment,    presence: true
   def self.get_new_comment(post_id)
-  		puts "new model"
-		Comment.new(post_id: post_id)
+	Comment.new(post_id: post_id)
   end
 
   def self.get_comments(post_id)
- 	puts "get comment"
  	Comment.where(post_id: post_id)
   end
 
